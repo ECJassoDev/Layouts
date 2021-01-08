@@ -1,43 +1,106 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
-
+import {View, Image, Text, ScrollView} from 'react-native';
+import styles from './styles';
 const App = () => {
   return (
     <>
-      <View style={styles.mianContainer}>
-        <View style={styles.box1} />
-        <View style={styles.box2} />
-        <View style={styles.box3} />
-        <View style={styles.box4} />
-      </View>
+      <ScrollView>
+        <View style={styles.bannerContainer}>
+          <Image
+            style={styles.banner}
+            source={require('./assets/img/bg.jpg')}
+          />
+        </View>
+        <View style={styles.container}>
+          <Text style={[styles.title, styles.titleCenter]}>
+            ¿Qué hacer en Paris?
+          </Text>
+          <ScrollView horizontal>
+            <View>
+              <Image
+                style={styles.city}
+                source={require('./assets/img/actividad1.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.city}
+                source={require('./assets/img/actividad2.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.city}
+                source={require('./assets/img/actividad3.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.city}
+                source={require('./assets/img/actividad4.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.city}
+                source={require('./assets/img/actividad5.jpg')}
+              />
+            </View>
+          </ScrollView>
+          <Text style={[styles.title, styles.titleCenter]}>
+            Los mejores alojamientos
+          </Text>
+          <View>
+            <View>
+              <Image
+                style={styles.target}
+                source={require('./assets/img/mejores1.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.target}
+                source={require('./assets/img/mejores2.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.target}
+                source={require('./assets/img/mejores3.jpg')}
+              />
+            </View>
+          </View>
+          <Text style={[styles.title, styles.titleCenter]}>Alojamientos chidos en L.A.</Text>
+          <View style={styles.lodgingContainer}>
+            <View style={styles.lodgingitem}>
+              <Image
+                style={styles.lodgingImage}
+                source={require('./assets/img/hospedaje1.jpg')}
+              />
+            </View>
+            <View style={styles.lodgingitem}>
+              <Image
+                style={styles.lodgingImage}
+                source={require('./assets/img/hospedaje2.jpg')}
+              />
+            </View>
+            <View style={styles.lodgingitem}>
+              <Image
+                style={styles.lodgingImage}
+                source={require('./assets/img/hospedaje3.jpg')}
+              />
+            </View>
+            <View style={styles.lodgingitem}>
+              <Image
+                style={styles.lodgingImage}
+                source={require('./assets/img/hospedaje4.jpg')}
+              />
+            </View>
+          </View>
+        </View>
+      </ScrollView>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  mianContainer: {
-    backgroundColor: 'cornflowerblue',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-  },
-  box1: {
-    padding: 20,
-    backgroundColor: 'navy',
-  },
-  box2: {
-    padding: 20,
-    backgroundColor: 'yellow',
-  },
-  box3: {
-    padding: 20,
-    backgroundColor: 'green',
-  },
-  box4: {
-    padding: 20,
-    backgroundColor: 'teal',
-  },
-});
 
 export default App;
